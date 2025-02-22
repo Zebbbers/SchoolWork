@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Behind Content</title>
+    <style>
+        /* Container for the circle */
+        .circle-container {
+            position: fixed; /* Fixed position to stay in place */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for exact centering */
+            z-index: -1; /* Place behind other content */
+        }
+
+        /* Circle styling */
+        .circle {
+            width: 300px; /* Diameter of the circle */
+            height: 300px; /* Diameter of the circle */
+            background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
+            border-radius: 50%; /* Makes it a circle */
+        }
+
+        /* Example content styling */
+        .content {
+            position: relative;
+            z-index: 1; /* Ensure content is above the circle */
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Circle container -->
+    <div class="circle-container">
+        <div class="circle"></div>
+    </div>
+
+    <!-- Example content -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is some example content that appears above the circle.</p>
+    </div>
+</body>
+</html>
